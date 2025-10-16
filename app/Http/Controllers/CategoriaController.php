@@ -12,7 +12,10 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        //
+        $categorias = Categoria::all();
+        // return response()->json($categorias);
+        return view('admin.categorias.index', compact('categorias'));
+        //echo "hola desde categorias";
     }
 
     /**
@@ -20,7 +23,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.categorias.create');
     }
 
     /**
